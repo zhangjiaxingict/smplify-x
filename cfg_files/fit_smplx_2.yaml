@@ -3,8 +3,8 @@ joints_to_ign:
     - 1
     - 9
     - 12
-data_folder: "/home/lyh/zjx/DJ-RN/Data/hico_20160224_det/images/test2015"
-output_folder: 'smplx_debug'
+data_folder: "/home/lyh/zjx/DJ-RN/hico_det"
+output_folder: '/home/lyh/zjx/DJ-RN/hico_det/smplx_result'
 prior_folder: 'priors'
 model_folder: '../DJ-RN/models'
 result_folder: 'results'

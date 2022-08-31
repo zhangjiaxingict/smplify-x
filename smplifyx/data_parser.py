@@ -180,6 +180,8 @@ class OpenPose(Dataset):
 
         keypoint_fn = osp.join(self.keyp_folder,
                                img_fn + '_keypoints.json')
+        if not os.path.exists(keypoint_fn):
+            return {}
         keyp_tuple = read_keypoints(keypoint_fn, use_hands=self.use_hands,
                                     use_face=self.use_face,
                                     use_face_contour=self.use_face_contour)

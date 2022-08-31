@@ -197,15 +197,19 @@ def main(**args):
                                                        dtype=dtype)
     # Add a fake batch dimension for broadcasting
     joint_weights.unsqueeze_(dim=0)
-
+    import pdb
     for idx, data in enumerate(dataset_obj):
-
+        #pdb.set_trace()
+        if not data:
+            continue
         img = data['img']
         fn = data['fn']
         keypoints = data['keypoints']
         print('Processing: {}'.format(data['img_path']))
 
         curr_result_folder = osp.join(result_folder, fn)
+        if(osp.exists(curr_result_folder)):
+            continue
         if not osp.exists(curr_result_folder):
             os.makedirs(curr_result_folder)
         curr_mesh_folder = osp.join(mesh_folder, fn)
