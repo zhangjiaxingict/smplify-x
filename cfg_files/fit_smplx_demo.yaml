@@ -6,7 +6,7 @@ joints_to_ign:
 data_folder: "demo"
 output_folder: 'demo_result'
 prior_folder: 'priors'
-model_folder: '../DJ-RN/models'
+model_folder: 'models'
 result_folder: 'results'
 gender: "neutral"
 model_type: 'smplx'
